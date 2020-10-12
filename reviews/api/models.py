@@ -9,7 +9,7 @@ from rest_framework.authtoken.models import Token
 class CustomUser(AbstractUser):
     """
     User Model of the project.
-    Created follwing the best Django practises.
+    Created following the best Django practises.
     """
     pass
 

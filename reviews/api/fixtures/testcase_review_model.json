@@ -1,0 +1,48 @@
+[
+    {
+        "model": "api.customuser",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$nmjmjFfsNcqa$FAGNZX14JzLzJg+JUgqe1Ube4MevcQpVWop6cE9NaJQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "adam",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-10-12T02:58:09.712Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "api.reviewer",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "self_description": "Hi! I am Adam!"
+        }
+    },
+    {
+        "model": "api.company",
+        "pk": 1,
+        "fields": {
+            "name": "Company 1"
+        }
+    },
+    {
+        "model": "api.review",
+        "pk": 1,
+        "fields": {
+            "reviewer": 1,
+            "company": 1,
+            "rating": 5,
+            "title": "Loved it!",
+            "summary": "I loved it! Pretty good!",
+            "submission_date": "2020-10-12",
+            "ip_address": "127.0.0.1"
+        }
+    }
+]

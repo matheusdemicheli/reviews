@@ -1,0 +1,9 @@
+[
+    {
+        "model": "api.company",
+        "pk": 1,
+        "fields": {
+            "name": "Company 1"
+        }
+    }
+]
