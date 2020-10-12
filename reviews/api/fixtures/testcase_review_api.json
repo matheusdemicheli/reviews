@@ -1,0 +1,133 @@
+[
+    {
+        "model": "api.customuser",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$nmjmjFfsNcqa$FAGNZX14JzLzJg+JUgqe1Ube4MevcQpVWop6cE9NaJQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "adam",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-10-12T02:58:09.712Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "api.customuser",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$nmjmjFfsNcqa$FAGNZX14JzLzJg+JUgqe1Ube4MevcQpVWop6cE9NaJQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "carlos",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-10-12T02:58:09.712Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "api.customuser",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$nmjmjFfsNcqa$FAGNZX14JzLzJg+JUgqe1Ube4MevcQpVWop6cE9NaJQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "mary",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-10-12T02:58:09.712Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "api.reviewer",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "self_description": "Hi! I am Adam!"
+        }
+    },
+    {
+        "model": "api.reviewer",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "self_description": "Hi! I am Carlos!"
+        }
+    },
+    {
+        "model": "api.reviewer",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "self_description": "Hi! I am Mary!"
+        }
+    },
+    {
+        "model": "api.company",
+        "pk": 1,
+        "fields": {
+            "name": "Company 1"
+        }
+    },
+    {
+        "model": "api.company",
+        "pk": 2,
+        "fields": {
+            "name": "Company 2"
+        }
+    },
+    {
+        "model": "api.review",
+        "pk": 1,
+        "fields": {
+            "reviewer": 1,
+            "company": 1,
+            "rating": 5,
+            "title": "Loved it!",
+            "summary": "I loved it! Pretty good!",
+            "submission_date": "2020-10-12",
+            "ip_address": "127.0.0.1"
+        }
+    },
+    {
+        "model": "api.review",
+        "pk": 2,
+        "fields": {
+            "reviewer": 2,
+            "company": 1,
+            "rating": 3,
+            "title": "Could be better",
+            "summary": "I am a little disappointed",
+            "submission_date": "2020-10-12",
+            "ip_address": "127.0.0.1"
+        }
+    },
+    {
+        "model": "api.review",
+        "pk": 3,
+        "fields": {
+            "reviewer": 2,
+            "company": 2,
+            "rating": 2,
+            "title": "Not good",
+            "summary": "I won't buy again!",
+            "submission_date": "2020-10-12",
+            "ip_address": "127.0.0.1"
+        }
+    }
+]

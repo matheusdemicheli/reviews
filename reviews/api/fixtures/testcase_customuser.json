@@ -1,0 +1,20 @@
+[
+    {
+        "model": "api.customuser",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$nmjmjFfsNcqa$FAGNZX14JzLzJg+JUgqe1Ube4MevcQpVWop6cE9NaJQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "adam",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-10-12T02:58:09.712Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]
