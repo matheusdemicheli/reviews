@@ -1,12 +1,15 @@
 from django.db import models
+from django.db.models.signals import post_save
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
 
 
 class CustomUser(AbstractUser):
     """
     User Model of the project.
-    Created follwing the best practises of Django Documentation.
+    Created follwing the best Django practises.
     """
     pass
 
@@ -31,7 +34,7 @@ class Reviewer(models.Model):
         """
         Returns the representation of the instance.
         """
-        return self.user
+        return str(self.user)
 
 
 class Company(models.Model):
@@ -77,4 +80,13 @@ class Review(models.Model):
         """
         Returns the representation of the instance.
         """
-        return '%s -> %s' % (self.reviewer, self.company)
+        return '%s - %s' % (self.reviewer, self.company)
+
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+    """
+    Creates AUTH TOKEN for the created User.
+    """
+    if created:
+        Token.objects.create(user=instance)
