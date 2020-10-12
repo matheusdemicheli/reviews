@@ -1,0 +1,140 @@
+[
+{
+    "model": "api.customuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$TFZyqLInklIe$G2AneooeIoNpnMHy+g+m1nOanbW5WDRYdvKu3/9qrCs=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-10-12T02:58:09.175Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "api.customuser",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$nmjmjFfsNcqa$FAGNZX14JzLzJg+JUgqe1Ube4MevcQpVWop6cE9NaJQ=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "john",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-10-12T02:58:09.712Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "api.customuser",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$37tCsCvLWleM$fG1Evvi+Pj3i0Hil+L2wT4+8P+ahjsfbSKipOqlNKTM=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mary",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-10-12T02:58:10.199Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "api.customuser",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$GhXrF1LjRD82$cfB/vPL2muxihUF7waNVwe46QLFAtpTvvzM2BogKk3U=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "carlos",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-10-12T02:58:10.619Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "api.reviewer",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "self_description": null
+    }
+},
+{
+    "model": "api.reviewer",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "self_description": null
+    }
+},
+{
+    "model": "api.reviewer",
+    "pk": 3,
+    "fields": {
+        "user": 3,
+        "self_description": null
+    }
+},
+{
+    "model": "api.reviewer",
+    "pk": 4,
+    "fields": {
+        "user": 4,
+        "self_description": "I am very nice person!"
+    }
+},
+{
+    "model": "api.company",
+    "pk": 1,
+    "fields": {
+        "name": "Cool Car"
+    }
+},
+{
+    "model": "api.company",
+    "pk": 2,
+    "fields": {
+        "name": "Cool SocialMedia"
+    }
+},
+{
+    "model": "api.company",
+    "pk": 3,
+    "fields": {
+        "name": "Cool App"
+    }
+},
+{
+    "model": "api.review",
+    "pk": 1,
+    "fields": {
+        "reviewer": 3,
+        "company": 1,
+        "rating": 1,
+        "title": "Hated it!",
+        "summary": "A little text to say that I hated it!",
+        "submission_date": "2020-10-12",
+        "ip_address": "127.0.0.1"
+    }
+}
+]
