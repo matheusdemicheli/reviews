@@ -203,3 +203,31 @@ headers = {
 }
 response = requests.request("GET", url, headers=headers)
 ```
+
+<hr />
+
+## Running Unit Tests
+
+The unit tests of the project can be executed with the following command:
+
+```sh
+$ ./manage.py test api
+```
+
+To see the % of code coveraged by tests, It's necessary to install the [coverage](https://pypi.org/project/coverage/) package:
+
+```sh
+$ pip install coverage
+```
+
+Use it to run the tests:
+
+```sh
+$ coverage run --source='.' manage.py test api
+```
+
+And see the report:
+
+```sh
+$ coverage report
+```
