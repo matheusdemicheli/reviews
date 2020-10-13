@@ -13,14 +13,20 @@ It was built using Django and django-rest-framework.
     $ git clone https://github.com/matheusdemicheli/reviews.git reviews
     ```
 
-2. **[Create a virtual environment](https://docs.python.org/3/library/venv.html), active it and install the requirements**
+2. **[Create a virtual environment](https://docs.python.org/3/library/venv.html) and active it**
+
+    ```sh
+    $ python3 -m venv my_venv
+    $ source my_venv/bin/activate
+    ```
+3. **Go to review folder and install requirements.txt**
 
     ```sh
     $ cd reviews
     $ pip install -r requirements.txt
     ```
 
-3. **Define environment variables**
+4. **Define environment variables**
 
     You must define REVIEWS_SECRET_KEY in your environment with any value to be used inplace of Django SECRET_KEY variable:
 
@@ -34,14 +40,14 @@ It was built using Django and django-rest-framework.
     $ export REVIEWS_DEBUG=True
     ```
 
-4. **Find manage.py inside reviews folder and run migrations**
+5. **Find manage.py inside reviews folder and run migrations**
 
     ```sh
     $ cd reviews
     $ ./manage.py migrate
     ```
 
-5. **Load test data (optional)**
+6. **Load test data (optional)**
 
     ```sh
     $ ./manage.py loaddata test_data.json
@@ -57,7 +63,7 @@ It was built using Django and django-rest-framework.
     | mary | 321 | no |
     | carlos | 123 | no |
 
-6. **Start the Django development environment**
+7. **Start the Django development environment**
 
     ```sh
     $ ./manage.py runserver 0:8000
