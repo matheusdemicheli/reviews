@@ -13,9 +13,10 @@ It was built using Django and django-rest-framework.
     $ git clone https://github.com/matheusdemicheli/reviews.git reviews
     ```
 
-2. **[Create a virtual environment](https://docs.python.org/3/library/venv.html) and install the requirements**
+2. **[Create a virtual environment](https://docs.python.org/3/library/venv.html), active it and install the requirements**
 
     ```sh
+    $ cd reviews
     $ pip install -r requirements.txt
     ```
 
@@ -33,10 +34,10 @@ It was built using Django and django-rest-framework.
     $ export REVIEWS_DEBUG=True
     ```
 
-4. **Go to reviews/reviews and run migrations**
+4. **Find manage.py inside reviews folder and run migrations**
 
     ```sh
-    $ cd reviews/reviews
+    $ cd reviews
     $ ./manage.py migrate
     ```
 
