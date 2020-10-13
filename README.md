@@ -7,19 +7,19 @@ It was built using Django and django-rest-framework.
 
 ## How to setup the project
 
-**1. Download the project**
+1. **Download the project**
 
     ```sh
     $ git clone https://github.com/matheusdemicheli/reviews.git reviews
     ```
 
-**2. [Create a virtual environment](https://docs.python.org/3/library/venv.html) and install the requirements**
+2. **[Create a virtual environment](https://docs.python.org/3/library/venv.html) and install the requirements**
 
     ```sh
     $ pip install -r requirements.txt
     ```
 
-**3. Define environment variables**
+3. **Define environment variables**
 
     You must define REVIEWS_SECRET_KEY in your environment with any value to be used inplace of Django SECRET_KEY variable:
 
@@ -33,14 +33,14 @@ It was built using Django and django-rest-framework.
     $ export REVIEWS_DEBUG=True
     ```
 
-**4. Go to reviews/reviews and run migrations**
+4. **Go to reviews/reviews and run migrations**
 
     ```sh
     $ cd reviews/reviews
     $ ./manage.py migrate
     ```
 
-**5. Load test data (optional)**
+5. **Load test data (optional)**
 
     ```sh
     $ ./manage.py loaddata test_data.json
@@ -56,7 +56,7 @@ It was built using Django and django-rest-framework.
     | mary | 321 | no |
     | carlos | 123 | no |
 
-**6. Start the Django development environment**
+6. **Start the Django development environment**
 
     ```sh
     $ ./manage.py runserver 0:8000
