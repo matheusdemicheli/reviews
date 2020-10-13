@@ -3,64 +3,66 @@
 This is a project of a simple API that allows users to post and retrieve their reviews.
 It was built using Django and django-rest-framework.
 
+<hr />
+
 ## How to setup the project
 
 1. Download the project:
 
-```sh
-$ git clone https://github.com/matheusdemicheli/reviews.git reviews
-```
+    ```sh
+    $ git clone https://github.com/matheusdemicheli/reviews.git reviews
+    ```
 
 2. [Create a virtual environment](https://docs.python.org/3/library/venv.html) and install the requirements:
 
-```sh
-$ pip install -r requirements.txt
-```
+    ```sh
+    $ pip install -r requirements.txt
+    ```
 
 3. Define environment variables
 
-You must define REVIEWS_SECRET_KEY in your environment with any value to be used inplace of Django SECRET_KEY variable:
+    You must define REVIEWS_SECRET_KEY in your environment with any value to be used inplace of Django SECRET_KEY variable:
 
-```sh
-$ export REVIEWS_SECRET_KEY=1234567890
-```
+    ```sh
+    $ export REVIEWS_SECRET_KEY=1234567890
+    ```
 
-Also, REVIEWS_DEBUG can be defined optionally to be used inplace of Django DEBUG variable (default value is False):
+    Also, REVIEWS_DEBUG can be defined optionally to be used inplace of Django DEBUG variable (default value is False):
 
-```sh
-$ export REVIEWS_DEBUG=True
-```
+    ```sh
+    $ export REVIEWS_DEBUG=True
+    ```
 
 4. Go to reviews/reviews and run migrations:
 
-```sh
-$ cd reviews/reviews
-$ ./manage.py migrate
-```
+    ```sh
+    $ cd reviews/reviews
+    $ ./manage.py migrate
+    ```
 
 5. Load test data (optional)
 
-This will create some Users, Tokens, Reviewers and Reviews into the database (SQLite by default). <br>
-The following users will be created:
+    ```sh
+    $ ./manage.py loaddata test_data.json
+    ```
 
-| Username | Password | Super User |
-| ------ | ------ | ------ |
-| admin | admin | yes |
-| john | 123 | no |
-| mary | 321 | no |
-| carlos | 123 | no |
+    This will create some Users, Tokens, Reviewers and Reviews into the database (SQLite by default). <br>
+    The following users will be created:
 
-```sh
-$ ./manage.py loaddata test_data.json
-```
+    | Username | Password | Super User |
+    | ------ | ------ | ------ |
+    | admin | admin | yes |
+    | john | 123 | no |
+    | mary | 321 | no |
+    | carlos | 123 | no |
 
 6. Start the Django development environment:
 
-```sh
-$ ./manage.py runserver 0:8000
-```
+    ```sh
+    $ ./manage.py runserver 0:8000
+    ```
 
- <hr />
+<hr />
 
 ## List of Availables URLs
 
@@ -82,7 +84,7 @@ Creates a Review for the logged user.
 
     | Parameter | Type | Required | Description |
     | ------ | ------ | ------ | ------ |
-    | rating | int | yes | Rating of the Review. Possible value are: 1, 2, 3, 4 or 5 |
+    | rating | int | yes | Rating of the Review. Possible values are: 1, 2, 3, 4 or 5 |
     | title | str | yes | Title of the Review |
     | summary | str | yes | Summary of the Review |
     | company | int | yes | Company's primary key |
@@ -126,7 +128,7 @@ payload = {
     'username': 'mary',
     'password': '321'
 }
-response = requests.request("POST", url, data=payload, files=files)
+response = requests.request("POST", url, data=payload)
 token = json.loads(reponse.content)['token']
 ```
 
